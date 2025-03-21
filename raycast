@@ -1,4 +1,20 @@
- void Update()
+//MeshCollider Version
+void Update()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+            
+        {
+
+            MeshCollider mc = hit.collider as MeshCollider;
+        }
+    }
+
+// BoxCollider Version
+
+void Update()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -10,4 +26,3 @@
             BoxCollider bc = hit.collider as BoxCollider;
         }
     }
-
