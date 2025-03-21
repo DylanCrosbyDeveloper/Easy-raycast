@@ -1,8 +1,9 @@
 //MeshCollider Version
+public Camera PlayerCamera;
 void Update()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
             
@@ -13,11 +14,11 @@ void Update()
     }
 
 // BoxCollider Version
-
+public Camera PlayerCamera;
 void Update()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
             
